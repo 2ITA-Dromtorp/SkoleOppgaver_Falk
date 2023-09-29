@@ -1,64 +1,63 @@
-// src/components/Game.js
+import React, { useState } from 'react';
+import './App.css';
 
-import React, { useState } from "react";
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
-const options = ["rock", "paper", "scissors"];
+function App() {
+  const initialNames = [
+    'Martin', 'Mathias', 'Kevin', 'Andreas',
+    'Falk', 'Sander', 'Ylva', 'Vanessa', 'Chen',
+    'Fridtjof', 'Luz'
+  ];
 
-const Game = () => {
-  const [playerChoice, setPlayerChoice] = useState(null);
-  const [computerChoice, setComputerChoice] = useState(null);
-  const [result, setResult] = useState(null);
+  const [names, setNames] = useState(initialNames);
 
-  const computerSelects = () => {
-    const randomIndex = Math.floor(Math.random() * options.length);
-    return options[randomIndex];
-  };
-
-  const handlePlayerChoice = (choice) => {
-    const computer = computerSelects();
-    setPlayerChoice(choice);
-    setComputerChoice(computer);
-    determineWinner(choice, computer);
-  };
-
-  const determineWinner = (player, computer) => {
-    if (player === computer) {
-      setResult("It's a tie!");
-    } else if (
-      (player === "rock" && computer === "scissors") ||
-      (player === "paper" && computer === "rock") ||
-      (player === "scissors" && computer === "paper")
-    ) {
-      setResult("You win!");
-    } else {
-      setResult("Computer wins!");
-    }
+  const handleRandomize = () => {
+    setNames(shuffleArray([...names]));
   };
 
   return (
-    <div className="game">
-      <h1>Rock, Paper, Scissors</h1>
-      <div className="choices">
-        {options.map((option) => (
-          <button
-            key={option}
-            onClick={() => handlePlayerChoice(option)}
-            disabled={playerChoice !== null}
-          >
-            {option}
-          </button>
+    <div className='container'>
+
+      <div className='learer'>
+        <div className='person'>
+          Lærer
+        </div>
+      </div>
+
+      <div className='forste_rad'>
+        {names.slice(0, 4).map((name, index) => (
+          <div key={index} className='person'>
+            {name}
+          </div>
         ))}
       </div>
-      {playerChoice && computerChoice && (
-        <div className="results">
-          <p>Your choice: {playerChoice}</p>
-          <p>Computer's choice: {computerChoice}</p>
-          <p>{result}</p>
-          <button onClick={() => window.location.reload()}>Play Again</button>
-        </div>
-      )}
+
+      <div className='andre_rad'>
+        {names.slice(4, 9).map((name, index) => (
+          <div key={index} className='person'>
+            {name}
+          </div>
+        ))}
+      </div>
+
+      <div className='tredje_rad'>
+        {names.slice(9).map((name, index) => (
+          <div key={index} className='person'>
+            {name}
+          </div>
+        ))}
+      </div>
+
+      <button onClick={handleRandomize}>Randomize Names</button>
     </div>
   );
-};
+}
 
-export default Game;
+export default App;

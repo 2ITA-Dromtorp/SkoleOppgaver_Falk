@@ -1,0 +1,42 @@
+/* src/components/Game.css (or your preferred location) */
+
+.game {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .choices button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .choices img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .results {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
