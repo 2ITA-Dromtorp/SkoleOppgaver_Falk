@@ -1,0 +1,70 @@
+/* SignupPage.css */
+  
+  .signup-button {
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-button:hover {
+    background-color: #45a049; /* Darker Green on Hover */
+  }
+  
+  .back-to-home-button {
+    background-color: #333; /* Dark background color */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-to-home-button:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+  
+  .confirmation-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    animation: slideInFadeOut 6s ease-in-out forwards;
+  }
+  
+  @keyframes slideInFadeOut {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    5% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+  
+  /* Add this style for stacking popups in rows */
+  .confirmation-popup + .confirmation-popup {
+    margin-right: 10px; /* Adjust the spacing between popups */
+  }
+  
+  .signup-content {
+    position: relative;
+  }
+  
