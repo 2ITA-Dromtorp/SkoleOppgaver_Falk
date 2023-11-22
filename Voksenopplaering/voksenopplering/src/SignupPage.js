@@ -1,6 +1,6 @@
 // SignupPage.js
 import React, { useState, useEffect } from 'react';
-import './SignupPage.css';
+import './CSS/SignupPage.css';
 import { useNavigate } from 'react-router-dom';
 
 function SignupPage() {
@@ -58,11 +58,13 @@ function SignupPage() {
         )}
 
         {/* Render popups */}
+        <div id="popups">
         {popups.map((popup) => (
           <div key={popup.id} className="confirmation-popup">
             <p>You have successfully signed up for {popup.class} class!</p>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );

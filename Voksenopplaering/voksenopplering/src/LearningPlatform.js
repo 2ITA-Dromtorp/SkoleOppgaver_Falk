@@ -1,6 +1,6 @@
 // LearningPlatform.js
 import React, { useState } from 'react';
-import './LearningPlatform.css'; // Import the CSS file for styling
+import './CSS/LearningPlatform.css'; // Import the CSS file for styling
 
 function LearningPlatform({ onLogin }) {
   const [loggedIn, setLoggedIn] = useState(false);
