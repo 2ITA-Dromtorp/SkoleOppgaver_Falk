@@ -22,7 +22,7 @@ function MainPage() {
 
   return (
     <div>
-      {/* Navigation Bar */}
+      {/* |navigation Bar */}
       <nav className="main-nav">
         <ul className="main-nav-list">
           <li>
@@ -46,7 +46,7 @@ function MainPage() {
         </div>
         <div className="class-container">
           <div className="class-box" onClick={() => handleClassClick('grunnleggende datakunnskap')}>
-            <img src="path/to/image1.jpg" alt="Grunnleggende datakunnskap" />
+            <img src="./Pictures/grunnleggendedatakunnskap.png" alt="Grunnleggende datakunnskap" />
             <p>Class Description 1</p>
           </div>
           <div className="class-box" onClick={() => handleClassClick('norsk')}>
