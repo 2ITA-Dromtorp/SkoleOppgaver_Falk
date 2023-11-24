@@ -1,5 +1,5 @@
 // MainPage.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Login from './LoginPopup'; // Import the Login component
 import ClassPopup from './ClassPopup'; // Import the ClassPopup component
@@ -41,23 +41,28 @@ function MainPage() {
       </nav>
 
       {/* Class Signup Boxes */}
-      <div className="available-classes">
-        <h2>Available Classes</h2>
-      </div>
-      <div className="class-container">
-        <div className="class-box" onClick={() => handleClassClick('grunnleggende datakunnskap')}>
-          grunnleggende datakunnskap
+        <div className="available-classes">
+          <h2>Available Classes</h2>
         </div>
-        <div className="class-box" onClick={() => handleClassClick('norsk')}>
-          norsk
+        <div className="class-container">
+          <div className="class-box" onClick={() => handleClassClick('grunnleggende datakunnskap')}>
+            <img src="path/to/image1.jpg" alt="Grunnleggende datakunnskap" />
+            <p>Class Description 1</p>
+          </div>
+          <div className="class-box" onClick={() => handleClassClick('norsk')}>
+            <img src="path/to/image2.jpg" alt="Norsk" />
+            <p>Class Description 2</p>
+          </div>
+          <div className="class-box" onClick={() => handleClassClick('Mat og Helse')}>
+            <img src="path/to/image3.jpg" alt="Mat og Helse" />
+            <p>Class Description 3</p>
+          </div>
+          <div className="class-box" onClick={() => handleClassClick('Kroppsøving')}>
+            <img src="path/to/image4.jpg" alt="kroppsøving" />
+            <p>Class Description 4</p>
+          </div>
         </div>
-        <div className="class-box" onClick={() => handleClassClick('Mat og Helse')}>
-          Mat og Helse
-        </div>
-        <div className="class-box" onClick={() => handleClassClick('Kroppsøving')}>
-          Kroppsøving
-        </div>
-      </div>
+
 
       {showLogin && <Login onClose={() => setShowLogin(false)} />}
       {showPopup && <ClassPopup classTitle={selectedClass} onClose={closePopup} />}
