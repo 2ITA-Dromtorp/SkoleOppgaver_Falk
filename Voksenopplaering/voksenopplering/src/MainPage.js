@@ -24,7 +24,6 @@ function MainPage() {
   const handleClassClick = (classTitle) => {
     // Check if the user is already signed up for a class of the same subject
     if (userSignedClasses.some(className => className.includes(classTitle))) {
-      alert('You are already signed up for a class of this subject.');
     } else {
       // Show the popup
       setSelectedClass(classTitle);
@@ -109,8 +108,7 @@ function MainPage() {
                 setUserSignedClasses(prevState => {
                   return prevState.splice(prevState.indexOf("grunnleggende datakunnskap"), 1);
                 })
-              }}>Meld deg på!
-                meld AV
+              }}>Meld av
               </button>
             </>)}
           </div>
