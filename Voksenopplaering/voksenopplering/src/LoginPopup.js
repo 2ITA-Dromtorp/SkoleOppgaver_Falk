@@ -1,28 +1,92 @@
-// LoginPopup.js
-import React from 'react';
+//LoginPopup.js
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import './CSS/LoginPopup.css'; // Import the CSS file for styling
+import './CSS/LoginPopup.css';
+import json from './db.js';
+import { AuthContext } from './AuthContext.js';
 
-function LoginPopup({ onClose }) {
+function LoginPopup({ onClose, onLogin }) {
+  const [isLoggedIn, noe, noe2, setLoggedIn] = useContext(AuthContext);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    try {
+      // Check if the entered username and password match any user in the database
+      const matchingUser = json.users.find(
+        (user) => user.username === username && user.password === password
+      );
+
+      if (matchingUser) {
+        setLoggedIn(true);
+        onLogin(username); // Notify the parent component about the login
+      } else {
+        alert('Invalid username or password');
+      }
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  };
+
+  const handleLogout = () => {
+    // Handle the logout logic
+    setLoggedIn(false);
+    setUsername('');
+    setPassword('');
+  };
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <div className="login-popup">
-      <span className="close-button" onClick={onClose}>&times;</span>
-      <h2>Login</h2>
-      <form>
-        <label htmlFor="username">Username:</label>
-        <input type="text" id="username" name="username" />
+      <div className="popup-content">
+        {/* Close button */}
+        <button className="close-button" onClick={onClose}>
+          &times;
+        </button>
 
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" />
-
-        <button type="submit">Login</button>
-      </form>
+        {/* Login/logout button */}
+        {isLoggedIn ? (
+          <>
+            <p>Welcome, {username}!</p>
+            <button className="login-button" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <button className="login-button" onClick={handleLogin}>
+              Login
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
 
 LoginPopup.propTypes = {
   onClose: PropTypes.func.isRequired,
+  onLogin: PropTypes.func.isRequired,
 };
 
 export default LoginPopup;

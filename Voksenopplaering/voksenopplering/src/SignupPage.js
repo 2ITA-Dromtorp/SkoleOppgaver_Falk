@@ -1,71 +1,202 @@
 // SignupPage.js
-import React, { useState, useEffect } from 'react';
-import './CSS/SignupPage.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './CSS/SignupPage.css'; // Import your SignupPage CSS file
+import LoginPopup from './LoginPopup';
+import ClassPopup from './ClassPopup';
+import {AuthContext} from "./AuthContext"
+import image1 from './Pictures/grunnleggendedatakunnskap.png';
+import image2 from './Pictures/Norsk.png';
+import image3 from './Pictures/matoghelse.png';
+import image4 from './Pictures/gym.png';
 
 function SignupPage() {
-  const [selectedClass, setSelectedClass] = useState(null);
-  const [popups, setPopups] = useState([]);
-  let navigate = useNavigate();
+  const [showLogin, setShowLogin] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedClass, setSelectedClass] = useState('');
+  const [loggedInUsername, setLoggedInUsername] = useState('');
+  const [userSignedClasses, setUserSignedClasses] = useState([]);
+  const {0: isLoggedIn} = useContext(AuthContext)
 
-  const handleClassSelection = (subject) => {
-    setSelectedClass(subject);
+  const handleClassClick = (classTitle) => {
+    // Check if the user is already signed up for a class of the same subject
+    if (userSignedClasses.some(className => className.includes(classTitle))) {
+      alert('You are already signed up for a class of this subject.');
+    } else {
+      // Update the user's signedClasses
+      setUserSignedClasses([...userSignedClasses, classTitle]);
+
+      // Show the popup
+      setSelectedClass(classTitle);
+      setShowPopup(true);
+    }
   };
 
-  const handleSignup = () => {
-    const newPopup = {
-      id: Date.now(), // Unique identifier for each popup
-      class: selectedClass,
-    };
-
-    setPopups([...popups, newPopup]);
-
-    // Automatically close the popup after 5 seconds
-    setTimeout(() => {
-      setPopups(popups.filter((popup) => popup.id !== newPopup.id));
-    }, 5000);
+  const closePopup = () => {
+    setShowPopup(false);
+    setSelectedClass('');
   };
+
+  const handleLogin = (username) => {
+    setLoggedInUsername(username);
+    setShowLogin(false);
+  };
+
+  const handleLogout = () => {
+    setLoggedInUsername('');
+    setUserSignedClasses([]);
+  };
+
+  // Navigation Bar JSX
+  const navBar = (
+    <nav className="main-nav">
+      <ul className="main-nav-list">
+        <li>
+          <Link to="/" className="home-button">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/classes" className="class-button">
+            Classes
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" className="contact-button">
+            Contact
+          </Link>
+        </li>
+        <li>
+          <button className="login-button" onClick={() => setShowLogin(true)}>
+            {loggedInUsername ? loggedInUsername : 'Login'}
+          </button>
+        </li>
+      </ul>
+    </nav>
+  );
 
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="navbar">
-        <div className="logo" onClick={() => navigate('/')}>
-          Voksenopplæring
-        </div>
-        <div className="nav-button" onClick={() => navigate('/')}>
-          Back to Homepage
-        </div>
-      </nav>
+      {navBar}
 
-      <div className="signup-content">
-        <h1>Signup for Classes</h1>
-        <p>Select a class to sign up:</p>
-        <button className="class-button" onClick={() => handleClassSelection('Norsk')}>Norsk</button>
-        <button className="class-button" onClick={() => handleClassSelection('Engelsk')}>Engelsk</button>
-        <button className="class-button" onClick={() => handleClassSelection('samfunnsfag')}>Samfunnsfag</button>
-        <button className="class-button" onClick={() => handleClassSelection('naturfag')}>Naturfag</button>
-        <button className="class-button" onClick={() => handleClassSelection('matte')}>Matte</button>
-        <button className="class-button" onClick={() => handleClassSelection('Fremmedspråk')}>Fremmedspråk</button>
-
-        {selectedClass && (
-          <div>
-            <p>Selected class: {selectedClass}</p>
-            <button className="signup-button" onClick={handleSignup}>
-              Signup
-            </button>
+      {/* Class Signup Boxes */}
+      {isLoggedIn ? (<>
+        <div className="available-classes">
+        <h2>Available Classes</h2>
+      </div>
+      <div className="zesty-class-container">
+        <div className="zesty-class-box" >
+          <img src={image1} alt="Grunnleggende datakunnskap" />
+          <div className="Class-info-box">
+            <h2>Datakunnskap</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tid:</th>
+                  <th>Sted:</th>
+                </tr>
+                <tr>
+                  <td>i morra</td>
+                  <td>hos falk</td>
+                </tr>
+                <tr>
+                  <td>2 dager</td>
+                  <td>hos din mor</td>
+                </tr>
+                <tr>
+                  <td>3 dager</td>
+                  <td>hos din far</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        )}
-
-        {/* Render popups */}
-        <div id="popups">
-        {popups.map((popup) => (
-          <div key={popup.id} className="confirmation-popup">
-            <p>You have successfully signed up for {popup.class} class!</p>
+        </div>
+        <div className="zesty-class-box" >
+          <img src={image2} alt="Norsk" />
+          <div className="Class-info-box">
+            <h2>Norsk</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tid:</th>
+                  <th>Sted:</th>
+                </tr>
+                <tr>
+                  <td>i morra</td>
+                  <td>hos falk</td>
+                </tr>
+                <tr>
+                  <td>2 dager</td>
+                  <td>hos din mor</td>
+                </tr>
+                <tr>
+                  <td>3 dager</td>
+                  <td>hos din far</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        ))}
+        </div>
+        <div className="zesty-class-box">
+          <img src={image3} alt="Mat og Helse" />
+          <div className="Class-info-box">
+            <h2>Mat og Helse</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tid:</th>
+                  <th>Sted:</th>
+                </tr>
+                <tr>
+                  <td>i morra</td>
+                  <td>hos falk</td>
+                </tr>
+                <tr>
+                  <td>2 dager</td>
+                  <td>hos din mor</td>
+                </tr>
+                <tr>
+                  <td>3 dager</td>
+                  <td>hos din far</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="zesty-class-box">
+          <img src={image4} alt="kroppsøving" />
+          <div className="Class-info-box">
+            <h2>Kroppsøving</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tid:</th>
+                  <th>Sted:</th>
+                </tr>
+                <tr>
+                  <td>i morra</td>
+                  <td>hos falk</td>
+                </tr>
+                <tr>
+                  <td>2 dager</td>
+                  <td>hos din mor</td>
+                </tr>
+                <tr>
+                  <td>3 dager</td>
+                  <td>hos din far</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
+      </>) : (
+        <p>
+          logg in din akustiske guitar 🎸🎸🎸
+        </p>
+      )}
+
+      {showLogin && <LoginPopup onClose={() => setShowLogin(false)} onLogin={handleLogin} />}
     </div>
   );
 }

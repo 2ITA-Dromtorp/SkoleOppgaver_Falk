@@ -23,7 +23,8 @@ nav {
   background-color: #333;
   padding: 10px;
   color: white;
-  height: 10vh;
+  position: sticky;
+  top: 0;
 }
 
 ul {
@@ -42,7 +43,6 @@ li {
   padding: 10px;
   margin: 10px;
 }
-
 
 #popups {
   position: fixed;
@@ -66,3 +66,7 @@ li {
 .confirmation-popup + .confirmation-popup {
   margin-right: 10px; /* Adjust the spacing between popups */
 }
+
+
+
+

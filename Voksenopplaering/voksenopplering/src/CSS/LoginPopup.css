@@ -5,36 +5,40 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px; /* Increased padding */
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
   
   .login-popup h2 {
     color: black;
+    font-size: 24px; /* Increased font size */
+    margin-bottom: 20px; /* Increased margin */
   }
   
   .login-popup label {
     display: block;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 18px; /* Increased font size */
   }
   
   .login-popup input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
+    padding: 20px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
     box-sizing: border-box;
+    font-size: 16px; /* Increased font size */
   }
   
   .login-popup button {
     background-color: #4caf50;
     color: #fff;
-    font-size: large;
+    font-size: 20px; /* Increased font size */
     padding: 20px 40px;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px; /* Increased border radius */
   }
   
   .login-popup button:hover {
@@ -42,10 +46,8 @@
   }
   
   .login-popup .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
+    right: 20px; /* Increased right margin */
+    font-size: 24px; /* Increased font size */
     cursor: pointer;
     color: #555;
   }
@@ -54,63 +56,92 @@
   .open-button {
     background-color: #555;
     color: white;
-    padding: 16px 20px;
+    padding: 20px 24px; /* Increased padding */
     border: none;
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
+    bottom: 30px; /* Increased bottom margin */
+    right: 35px; /* Increased right margin */
+    width: 320px; /* Increased width */
   }
   
+  /* The popup form - hidden by default */
   .form-popup {
     display: none;
     position: fixed;
     bottom: 0;
-    right: 15px;
+    right: 20px; /* Increased right margin */
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
   
+  /* Add styles to the form container */
   .form-container {
-    max-width: 300px;
-    padding: 10px;
+    max-width: 360px; /* Increased max-width */
+    padding: 20px; /* Increased padding */
     background-color: white;
   }
   
+  /* Full-width input fields */
   .form-container input[type=text],
   .form-container input[type=password] {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 20px; /* Increased padding */
+    margin: 10px 0 22px 0; /* Increased margin */
     border: none;
     background: #f1f1f1;
+    font-size: 16px; /* Increased font size */
   }
   
+  /* When the inputs get focus, do something */
   .form-container input[type=text]:focus,
   .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
   
+  /* Set a style for the submit/login button */
   .form-container .btn {
     background-color: #04AA6D;
     color: white;
-    padding: 16px 20px;
+    padding: 20px 24px; /* Increased padding */
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased margin */
     opacity: 0.8;
   }
   
+  /* Add a red background color to the cancel button */
   .form-container .cancel {
     background-color: red;
   }
   
+  /* Add some hover effects to buttons */
   .form-container .btn:hover,
   .open-button:hover {
     opacity: 1;
+  }
+  
+  /* Additional styles for the login popup */
+  .login-popup input[type=text],
+  .login-popup input[type=password],
+  .login-popup button {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  .login-popup button.login-button {
+    background-color: #333;
+    color: white;
+    padding: 20px 24px; /* Increased padding */
+    font-size: 20px; /* Increased font size */
+    transition: background-color 0.5s;
+  }
+  
+  .login-popup button.login-button:hover {
+    background-color: #222222;
   }
   

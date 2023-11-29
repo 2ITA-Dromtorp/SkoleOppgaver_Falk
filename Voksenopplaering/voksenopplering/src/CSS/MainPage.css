@@ -1,63 +1,73 @@
 /* MainPage.css */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-nav {
-    padding: 0;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .main-navbar {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-  }
-  
-  .main-navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-navbar li {
-    display: inline;
-    margin-right: 20px;
-  }
+.main-nav {
+  padding: 0;
+}
 
-  .main-nav-list {
-    margin: 0;
-    height: 100%;
-  }
-  
-  .main-nav-button {
-    background-color: #222; /* Slightly darker than the navbar background */
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .available-classes {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .class-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: space-around;
-  }
-  
-  /* MainPage.css */
+.main-navbar {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
 
+.main-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.main-nav-list {
+  margin: 0;
+  height: 100%;
+}
+
+.main-nav-button {
+  background-color: #222;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.available-classes {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.available-classes button{
+  font-weight: 700;
+  margin-left: 10px;
+}
+.available-classes h2{
+  margin: auto
+}
+
+
+.class-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* Class Box Styles */
 .class-box {
   background-color: #b0b0b0;
   color: white;
@@ -67,102 +77,185 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 .class-box img {
   max-width: 100%;
-  max-height: 150px; /* Adjust the height as needed */
-  margin-bottom: 10px;
+  max-height: 150px;
+  margin-right: 20px;
+  border-radius: 5px; /* Add border-radius to match the box */
 }
 
 .class-box p {
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
 }
 
-.class-box:hover {
-  background-color: #005073;
+#zesty-ahh-container.theme-light .class-box {
+  background-color: #878787d2;
+  color: black;
 }
 
-  
-  .main-nav a {
-    font-weight: 600;
-    font-size: 2rem;
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 24px 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#zesty-ahh-container.theme-dark .class-box {
+  background-color: #a2a2a2a2;
+  color: white;
 }
 
-  .home-button {
-    background-color: #333;
-    color: white;
-    height: 100%;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.5s;
-  }
-  
-  .home-button:hover {
-    background-color: #262626;
-  }
+#zesty-ahh-container.theme-light .class-box:hover {
+  background-color: #a2a2a2a2 !important;
+}
 
-  .class-button {
-    background-color: #333; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.5s;
-  }
-  
-  .class-button:hover {
-    background-color: #222222; 
-  }
+#zesty-ahh-container.theme-dark .class-box:hover {
+  background-color: #111 !important;
+}
 
-  .contact-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.5s;
-  }
-  
-  .contact-button:hover {
-    background-color: #222222; /* Darker Blue on Hover */
-  }
 
-  .login-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.5s;
-    font-weight: 600;
-    font-size: 2rem;
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 24px 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-button:hover {
-    background-color: #222222; /* Darker Blue on Hover */
-  }
+
+
+#zesty-ahh-container.theme-light .main-nav {
+  background-color: #d2d2d2d2 !important;
+}
+
+#zesty-ahh-container.theme-dark .main-nav {
+  background-color: #333 !important;
+}
+
+#zesty-ahh-container.theme-light .main-nav li :is(a, button) {
+  background-color: #d2d2d2d2 !important;
+  color: black;
+}
+
+#zesty-ahh-container.theme-dark .main-nav li :is(a, button){
+  background-color: #333 !important;
+  color: white;
+}
+
+
+
+
+#zesty-ahh-container.theme-light .main-nav li :is(a, button):hover{
+  background-color: #a2a2a2a2 !important;
+}
+
+#zesty-ahh-container.theme-dark .main-nav li :is(a, button):hover{
+  background-color: #444 !important;
+}
+
+
+
+.class-info-box {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Styles */
+.main-nav a {
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.619);
+}
+
+.home-button {
+  background-color: #333;
+  color: white;
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+
+.home-button:hover {
+  background-color: #262626;
+}
+
+.class-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+
+.class-button:hover {
+  background-color: #222222;
+}
+
+.contact-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+
+.contact-button:hover {
+  background-color: #222222;
+}
+
+.login-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button:hover {
+  background-color: #222222;
+}
+
+
+
+
+.du-meldt-på {
+  font-size: 24px;
+  color: rgb(0, 255, 0);
+}
+
+#zesty-ahh-container {
+  min-height: 100svh;
+}
+
+#zesty-ahh-container.theme-light {
+  color: black !important;
+  background-color: white !important;
+  height: 100%;
+}
+
+#zesty-ahh-container.theme-dark {
+  color: white !important;
+  background-color: black !important;
+  height: 100%;
+}

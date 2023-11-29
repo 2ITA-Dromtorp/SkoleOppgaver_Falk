@@ -2,12 +2,12 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './CSS/ClassPopup.css'; // Import the CSS file for styling
-import image1 from './Pictures/grunnleggendedatakunnskap.png'
-import image2 from './Pictures/Norsk.png'
-import image3 from './Pictures/gym.png'
-import image4 from './Pictures/matoghelse.png'
+import image1 from './Pictures/grunnleggendedatakunnskap.png';
+import image2 from './Pictures/Norsk.png';
+import image3 from './Pictures/gym.png';
+import image4 from './Pictures/matoghelse.png';
 
-function ClassPopup({ classTitle, onClose }) {
+function ClassPopup({ classTitle, onClose, onSignUp }) {
   // Reference to the popup content div
   const popupContentRef = useRef(null);
 
@@ -69,7 +69,17 @@ function ClassPopup({ classTitle, onClose }) {
           <img src={currentClassInfo.image} alt="Class" className="class-image" />
           <h2>{currentClassInfo.header}</h2>
           <p>{currentClassInfo.description}</p>
-          <a href={currentClassInfo.link}>Go to Classes</a>
+          <div className="buttons-container">
+            {/* Go to Classes link */}
+            <a href={currentClassInfo.link} className="go-to-classes-button">
+              Go to Classes
+            </a>
+
+            {/* Sign Up button */}
+            <button className="sign-up-button" onClick={() => onSignUp(classTitle)}>
+              Sign Up
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +89,7 @@ function ClassPopup({ classTitle, onClose }) {
 ClassPopup.propTypes = {
   classTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
+  onSignUp: PropTypes.func.isRequired,
 };
 
 export default ClassPopup;
