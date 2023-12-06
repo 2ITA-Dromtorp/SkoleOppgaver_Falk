@@ -1,12 +1,13 @@
 // App.js
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './MainPage';
 import SignupPage from './SignupPage';
 import LoginPage from './LoginPage';
-import ContactPage from './ContactPage'
-import ThemeToggle from './ThemeToggle'; // Import the ThemeToggle component
-import { ThemeProvider, useTheme } from './ThemeContext'; // Import the ThemeProvider
+import ContactPage from './ContactPage';
+import ThemeToggle from './ThemeToggle';
+import { ThemeProvider, useTheme } from './ThemeContext';
+import AuthForm from './AuthForm'; // Import the AuthForm component
 import './CSS/App.css';
 
 function ThemeStyler({ children }) {
@@ -28,6 +29,9 @@ function App() {
             <Route path="/classes" element={<SignupPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            {/* Use AuthForm for registration and login */}
+            <Route path="/register" element={<AuthForm endpoint="register" buttonText="Register" />} />
+            <Route path="/login" element={<AuthForm endpoint="login" buttonText="Login" />} />
           </Routes>
         </Router>
       </ThemeStyler>

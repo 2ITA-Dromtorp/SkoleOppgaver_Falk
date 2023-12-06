@@ -73,6 +73,16 @@ function MainPage() {
                 {loggedInUsername ? loggedInUsername : 'Login'}
               </button>
             </li>
+            <li>
+            <Link to="/register" className="contact-button">
+                Register
+              </Link>
+            </li>
+            <li>
+            <Link to="/login" className="contact-button">
+                loginS
+              </Link>
+            </li>
           </ul>
         </div>
         <toggleTheme />
