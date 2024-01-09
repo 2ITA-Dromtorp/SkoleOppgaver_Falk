@@ -1,0 +1,10 @@
+[
+    [{"piece": null}, {"piece": {"color": "white", "type": "rook"}}, {"piece": {"color": "white", "type": "knight"}}, {"piece": {"color": "white", "type": "bishop"}}, {"piece": {"color": "white", "type": "queen"}}, {"piece": {"color": "white", "type": "king"}}, {"piece": {"color": "white", "type": "bishop"}}, {"piece": {"color": "white", "type": "knight"}}, {"piece": {"color": "white", "type": "rook"}}],
+    [{"piece": null}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}, {"piece": {"color": "white", "type": "pawn"}}],
+    [{"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}],
+    [{"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}],
+    [{"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}],
+    [{"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}, {"piece": null}],
+    [{"piece": null}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}, {"piece": {"color": "black", "type": "pawn"}}],
+    [{"piece": null}, {"piece": {"color": "black", "type": "rook"}}, {"piece": {"color": "black", "type": "knight"}}, {"piece": {"color": "black", "type": "bishop"}}, {"piece": {"color": "black", "type": "queen"}}, {"piece": {"color": "black", "type": "king"}}, {"piece": {"color": "black", "type": "bishop"}}, {"piece": {"color": "black", "type": "knight"}}, {"piece": {"color": "black", "type": "rook"}}]
+   ]
