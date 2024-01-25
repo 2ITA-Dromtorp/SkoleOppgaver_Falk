@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css';
 import { TicketsContext } from "./context"
 
-import Layout from './layout'
+import Layout from './'
 import Submit from './sider/submit';
 import Tickets from './sider/tickets';
 
@@ -15,7 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Submit />} />
-                        <Route path="tickets" element={<Tickets />} />
+                        <Route path="/tickets" element={<Tickets />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
