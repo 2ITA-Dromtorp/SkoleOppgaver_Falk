@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css';
 import { TicketsContext } from "./context"
 
-import Layout from './'
+import Layout from './layout'
 import Submit from './sider/submit';
 import Tickets from './sider/tickets';
 
