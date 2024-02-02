@@ -1,0 +1,35 @@
+//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC Puzzle</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>NFC Puzzle</h1>
+    <div id="question-container">
+        <p></p>
+    </div>
+    <input type="text" id="answer" placeholder="Your answer">
+    <button id="submit">Submit</button>
+
+    <!-- Correct Answer Popup -->
+    <div class="popup" id="correct-answer-popup">
+        <span class="close" onclick="closePopup('correct-answer-popup')">&times;</span>
+        <p class="message">Correct answer!</p>
+    </div>
+
+    <!-- Puzzle Completion Popup -->
+    <div class="popup" id="completion-popup">
+        <span class="close" onclick="(() => document.getElementById('completion-popup').style.display = 'none')()">&times;</span>
+        <p class="message">Congratulations! You have completed the puzzle.</p>
+        <button id="restart" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <div id="question-counter">Question 1</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
