@@ -13,5 +13,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LOGINAPPEN_5F929 }}'
-          projectId: loginappen-5f929
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CAPTIONGAME_69420 }}'
+          projectId: captiongame-69420
