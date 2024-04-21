@@ -1,6 +1,7 @@
 // components/AdminPage.js
 import React, { useState, useEffect } from 'react';
 import './AdminPage.css';
+import pig from "./img/bigblackoilypig.png"
 
 function AdminPage() {
     const [captions, setCaptions] = useState([]);
@@ -28,7 +29,7 @@ function AdminPage() {
             <h2>Admin Page</h2>
             <div className="caption-container">
                 {/* Display picture */}
-                <img src="url_to_your_image" alt="Game Image" />
+                <img src= {pig} alt="Game Image" />
                 {/* Display captions in columns */}
                 {captions.map((neger) => {
                     return (
