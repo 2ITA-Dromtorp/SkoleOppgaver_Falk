@@ -1,0 +1,43 @@
+/* Vote.css */
+
+.container {
+    text-align: center;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .container img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .caption-column {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .caption-column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .caption-column p {
+    margin-bottom: 5px;
+  }
+  
+  .caption-column button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .caption-column button:hover {
+    background-color: #0056b3;
+  }

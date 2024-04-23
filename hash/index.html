@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passord Hashing</title>
+</head>
+<body>
+    <script>
+        function hashAndVerifyPassword() {
+            const password = prompt("Skriv inn passordet:");
+            fetch('http://localhost:3000/hash-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `password=${password}`
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log("Hashet passord:", result);
+                const inputPassword = prompt("Skriv inn passordet igjen for verifisering:");
+                fetch('http://localhost:3000/verify-password', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `password=${inputPassword}`
+                })
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('Feil:', error));
+            })
+            .catch(error => console.log('Feil:', error));
+        }
+
+        // Kjører funksjonen når siden lastes
+        hashAndVerifyPassword();
+    </script>
+</body>
+</html>
