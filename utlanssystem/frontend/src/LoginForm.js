@@ -9,7 +9,7 @@ export function LoginForm({ onLoginSuccess }) {
 
   const handleLogin = () => {
     // Handle login logic here
-    fetch('http://localhost:3001/login', {
+    fetch('/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

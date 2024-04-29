@@ -9,7 +9,7 @@ function TeacherDashboard() {
   }, []);
 
   const fetchStudentsWithEquipment = () => {
-    fetch('http://localhost:3001/all')
+    fetch('/api/all')
       .then(response => response.json())
       .then(data => {
         setAllData(data);
@@ -22,7 +22,7 @@ function TeacherDashboard() {
   const handleReturnItem = (studentId, equipmentId) => {
     const updatedStudents = allData.Equipment_loans.filter(loan => loan.student_id !== `S${studentId}`);
     setAllData(updatedStudents);
-    fetch('http://localhost:3001/returnequipment', {
+    fetch('/api/returnequipment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

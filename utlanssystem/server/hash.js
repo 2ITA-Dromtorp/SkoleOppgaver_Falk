@@ -15,7 +15,7 @@ module.exports.customHash = function customHash(password, salt, iterations = 100
         let hash = 0;
         for (let j = 0; j < hashedString.length; j++) {
             hash = (hash << 5) - hash + hashedString.charCodeAt(j);
-            hash |= 0; // Convert to 32bit integer
+            hash |= 0;
         }
         hashedString = String(hash);
     }

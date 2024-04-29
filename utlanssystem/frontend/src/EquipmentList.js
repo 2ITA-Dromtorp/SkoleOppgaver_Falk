@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function EquipmentList() {
     const [equipment, setEquipment] = useState();
 
-    useEffect(() => {
+    useEffect(() => { 
         // Fetch equipment data from the server
-        fetch('http://localhost:3001/all')
+        fetch('/api/all')
             .then(response => response.json())
             .then(data => setEquipment(data))
             .catch(error => console.error('Error fetching equipment:', error));
@@ -30,7 +30,7 @@ function EquipmentList() {
         };
     
         // Make a POST request to borrow equipment
-        fetch('http://localhost:3001/equipment_loans', {
+        fetch('/api/equipment_loans', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ function EquipmentList() {
 
 
     const handleReturnItem = (equipmentId) => {
-        fetch('http://localhost:3001/returnequipment', {
+        fetch('/api/returnequipment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ function EquipmentList() {
         });
       };
       
-    
+
 
 
     return (

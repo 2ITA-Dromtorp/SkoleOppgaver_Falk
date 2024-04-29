@@ -19,7 +19,7 @@ function AddTeacherForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001/addteacher', {
+    fetch('/api/addteacher', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

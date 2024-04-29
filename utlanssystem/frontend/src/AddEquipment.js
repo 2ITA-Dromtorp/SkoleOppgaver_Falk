@@ -19,7 +19,7 @@ function AddEquipment() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001/addequipment', {
+    fetch('/api/addequipment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

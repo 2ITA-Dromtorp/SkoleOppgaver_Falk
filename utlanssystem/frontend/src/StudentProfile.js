@@ -10,7 +10,7 @@ function StudentProfile() {
     const fetchStudentEquipment = () => {
         // Fetch equipment for the logged-in student
         const studentId = localStorage.getItem('loggedInUser_id'); // Assuming the student ID is stored in localStorage
-        fetch(`http://localhost:3001/studentEquipment/${studentId}`)
+        fetch(`/api/studentEquipment/${studentId}`)
             .then(response => {
                 if (!response.ok) {
                     console.error(`Error fetching student equipment: ${response.statusText}`);
@@ -30,7 +30,7 @@ function StudentProfile() {
     function handleReturnItem(equipmentId) {
         // Make a POST request to return the item
         console.log(equipmentId)
-        fetch('http://localhost:3001/returnequipment', {
+        fetch('/api/returnequipment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
