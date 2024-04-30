@@ -3,7 +3,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3001   //process.env.PORT || 8080
+const port = process.env.PORT || 80
 var mysql = require('mysql2');
 var cors = require('cors');
 
@@ -35,7 +35,7 @@ connection.connect(function (err) {
 });
 
 
-app.get('/all', (request, response) => {
+app.get('/api/all', (request, response) => {
   connection.query('SELECT * FROM students', function (serror, sresults, sfields) {
     if (serror) throw serror;
     connection.query('SELECT * FROM equipment', function (eerror, eresults, efields) {
@@ -49,7 +49,7 @@ app.get('/all', (request, response) => {
       });
     });
   });
-});
+}); 
 
 app.get("/updateequipment/:newspecification/:equipment_id", (request, response) => {
   let newspecification = request.params.newspecification;
@@ -117,7 +117,7 @@ app.post("/addequipment", (request, response) => {
   });
 });
 
-app.post("/equipment_loans", (request, response) => {
+app.post("/api/equipment_loans", (request, response) => {
   const { student_id, equipment_id, loan_status } = request.body;
 
   if (!student_id || !equipment_id || !loan_status) {
@@ -278,7 +278,7 @@ app.get('/studentEquipment/:studentId', (request, response) => {
 
 
 
-app.post("/login", (request, response) => {
+app.post("/api/login", (request, response) => {
   const { username, password } = request.body;
 
   if (!username || !password) {

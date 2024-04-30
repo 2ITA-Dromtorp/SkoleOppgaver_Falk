@@ -30,7 +30,7 @@ function TeacherDashboard() {
       body: JSON.stringify({ studentId: studentId, equipment_id: equipmentId })
     }).then(fetchStudentsWithEquipment); // Fetch students with equipment again after returning the item
   };
-
+  
   return (
     <div className="teacher-dashboard">
       <h2>Students List</h2>

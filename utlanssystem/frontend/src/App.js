@@ -28,7 +28,7 @@
 
     useEffect(() => {
       // Fetch equipment data from the server
-      fetch('/all')
+      fetch('/api/all')
         .then(response => response.json())
         .then(data => setEquipment(data))
         .catch(error => console.error('Error fetching equipment:', error));

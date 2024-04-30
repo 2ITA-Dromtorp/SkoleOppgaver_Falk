@@ -4,17 +4,7 @@ module.exports = function (app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://utlandromtorp.no/api',
-            changeOrigin: true,
-        }),
-    );
-}
-
-module.exports = function (app) {
-    app.use(
-        '/api',
-        createProxyMiddleware({
-            target: 'http://localhost:3000/api',
+            target: 'http://utlandromtorp.no',
             changeOrigin: true,
         }),
     );
