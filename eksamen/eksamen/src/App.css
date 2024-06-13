@@ -1,0 +1,325 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.links {
+  margin-left: auto;
+}
+
+
+
+.nav h1 {
+  margin-left: 2vw;
+}
+
+.nav button {
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-left: 10px;
+  width: 5vw;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+.nav button a {
+  color: black;
+}
+
+.nav button:hover {
+  background-color: #8a8a8a;
+}
+
+/* App.css */
+
+.nav .login-button {
+  background-color: green; /* Change the background color to green */
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 3vh;
+}
+
+.login-button:hover {
+  background-color: rgb(1, 88, 1); /* Change the hover background color to a darker shade of green */
+}
+
+.nav .logout-button {
+  background-color: rgb(156, 13, 13); /* Change the background color to green */
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 3vh;
+}
+
+.nav .logout-button:hover {
+  background-color: rgb(97, 0, 0); /* Change the hover background color to a darker shade of green */
+}
+
+.nav .logout-button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.nav .nav-button a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-top: 40px;
+  height: 40vh;
+}
+
+.main-page-header h1 {
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.main-page-header h2 {
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+.main-page-header button {
+  background-color: #d4d4d4;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-left: 10px;
+  width: 13vw;
+  height: 7vh;
+  border-radius: 5px;
+}
+
+.main-page-header button a {
+  color: black;
+  text-decoration: none;
+  font-size: large;
+}
+
+.tournaments-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+  margin-bottom: 100px;
+  
+}
+
+.forms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.turnering-form, .member-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(235, 235, 235);
+  width: 25vw;
+  height: 60vh;
+}
+
+
+.turnering-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-form button {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.turnering-form button {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.member-form h1 {
+  margin-bottom: 30px;
+}
+.turnering-form h1 {
+  margin-bottom:30px;
+}
+
+.login-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 25vw;
+  margin: 0 auto;
+}
+
+.login-form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-form-fields input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.login-form button:hover {
+  background-color: #0069d9;
+}
+
+.login-form h1 {
+  margin-bottom: 30px;
+}
+
+.login-form p {
+  margin-top: 0;
+}
+
+.login-form a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.login-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.members {
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.form-container h1 {
+  margin-top: 0;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form input,
+form select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,9 @@
+[
+	{
+		"product_id" : 1,
+		"product_name" : "baguette",
+		"description" : "kylling",
+		"price" : 20.00,
+		"quantity" : 1
+	}
+]

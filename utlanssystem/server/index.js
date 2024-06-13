@@ -3,7 +3,7 @@
 
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 80
+const port = process.env.PORT || 81
 var mysql = require('mysql2');
 var cors = require('cors');
 
@@ -21,7 +21,7 @@ console.log(flakcrypt("Skole23"));
 
 var connection = mysql.createConnection({
   host: 'localhost',
-  port: 3306,
+  port: 3307,
   user: 'root',
   database: 'dromtorp'
 });

@@ -1,0 +1,44 @@
+[
+	{
+		"product_id" : 1,
+		"product_name" : "baguette",
+		"description" : "kylling",
+		"price" : 20.00,
+		"quantity" : 0
+	},
+	{
+		"product_id" : 2,
+		"product_name" : "Brus",
+		"description" : "Pepsi",
+		"price" : 30.00,
+		"quantity" : 0
+	},
+	{
+		"product_id" : 3,
+		"product_name" : "lol",
+		"description" : "lol",
+		"price" : 69.00,
+		"quantity" : 0
+	},
+	{
+		"product_id" : 4,
+		"product_name" : "baguette",
+		"description" : "taco",
+		"price" : 100.00,
+		"quantity" : 0
+	},
+	{
+		"product_id" : 5,
+		"product_name" : "Brus",
+		"description" : "fanta",
+		"price" : 19.00,
+		"quantity" : 0
+	},
+	{
+		"product_id" : 6,
+		"product_name" : "Brus",
+		"description" : "solo",
+		"price" : 20.00,
+		"quantity" : 0
+	}
+]

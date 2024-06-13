@@ -1,0 +1,273 @@
+[
+	{
+	  "product_name": "Baguette",
+	  "description": "Baguette med kylling og pesto",
+	  "price": 45.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Baguette",
+	  "description": "Baguette med skinke og ost",
+	  "price": 40.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Baguette",
+	  "description": "Baguette med tunfisk og salat",
+	  "price": 50.00,
+	  "quantity": 15
+	},
+	{
+	  "product_name": "Salat",
+	  "description": "Kyllingsalat med fetaost",
+	  "price": 60.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Salat",
+	  "description": "Gresk salat med oliven og feta",
+	  "price": 55.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Salat",
+	  "description": "Salat med reker og avokado",
+	  "price": 65.00,
+	  "quantity": 18
+	},
+	{
+	  "product_name": "Wrap",
+	  "description": "Wrap med kylling og guacamole",
+	  "price": 45.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Wrap",
+	  "description": "Wrap med biff og grønnsaker",
+	  "price": 50.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Wrap",
+	  "description": "Wrap med hummus og grønnsaker",
+	  "price": 40.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Smørbrød",
+	  "description": "Smørbrød med røkt laks og eggerøre",
+	  "price": 35.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Smørbrød",
+	  "description": "Smørbrød med ost og skinke",
+	  "price": 30.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Smørbrød",
+	  "description": "Smørbrød med leverpostei og agurk",
+	  "price": 28.00,
+	  "quantity": 15
+	},
+	{
+	  "product_name": "Smoothie",
+	  "description": "Smoothie med jordbær og banan",
+	  "price": 35.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Smoothie",
+	  "description": "Smoothie med mango og ananas",
+	  "price": 35.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Smoothie",
+	  "description": "Smoothie med blåbær og spinat",
+	  "price": 40.00,
+	  "quantity": 15
+	},
+	{
+	  "product_name": "Yoghurt",
+	  "description": "Yoghurt med granola og bær",
+	  "price": 30.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Yoghurt",
+	  "description": "Yoghurt med honning og nøtter",
+	  "price": 30.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Yoghurt",
+	  "description": "Yoghurt med frukt og müsli",
+	  "price": 30.00,
+	  "quantity": 20
+	},
+	{
+	  "product_name": "Brødskive",
+	  "description": "Brødskive med ost og tomat",
+	  "price": 20.00,
+	  "quantity": 50
+	},
+	{
+	  "product_name": "Brødskive",
+	  "description": "Brødskive med skinke og paprika",
+	  "price": 22.00,
+	  "quantity": 45
+	},
+	{
+	  "product_name": "Brødskive",
+	  "description": "Brødskive med leverpostei og agurk",
+	  "price": 20.00,
+	  "quantity": 40
+	},
+	{
+	  "product_name": "Frukt",
+	  "description": "Frisk eple",
+	  "price": 10.00,
+	  "quantity": 60
+	},
+	{
+	  "product_name": "Frukt",
+	  "description": "Moden banan",
+	  "price": 12.00,
+	  "quantity": 55
+	},
+	{
+	  "product_name": "Frukt",
+	  "description": "Pære",
+	  "price": 12.00,
+	  "quantity": 50
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Assortert brus",
+	  "price": 20.00,
+	  "quantity": 100
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Svart kaffe",
+	  "price": 15.00,
+	  "quantity": 200
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Ulike typer te",
+	  "price": 15.00,
+	  "quantity": 100
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Appelsinjuice",
+	  "price": 30.00,
+	  "quantity": 60
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Kullsyreholdig mineralvann",
+	  "price": 25.00,
+	  "quantity": 90
+	},
+	{
+	  "product_name": "Drikke",
+	  "description": "Varm kakao med krem",
+	  "price": 35.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Bakst",
+	  "description": "Nygrillet vaffel med syltetøy",
+	  "price": 25.00,
+	  "quantity": 35
+	},
+	{
+	  "product_name": "Bakst",
+	  "description": "Hjemmelaget muffins",
+	  "price": 25.00,
+	  "quantity": 40
+	},
+	{
+	  "product_name": "Bakst",
+	  "description": "Store sjokoladecookies",
+	  "price": 20.00,
+	  "quantity": 50
+	},
+	{
+	  "product_name": "Pizza",
+	  "description": "Et stykke pizza med pepperoni",
+	  "price": 30.00,
+	  "quantity": 40
+	},
+	{
+	  "product_name": "Pizza",
+	  "description": "Et stykke pizza med skinke",
+	  "price": 30.00,
+	  "quantity": 35
+	},
+	{
+	  "product_name": "Pizza",
+	  "description": "Et stykke pizza med grønnsaker",
+	  "price": 30.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Snacks",
+	  "description": "Potetgull med havsalt",
+	  "price": 25.00,
+	  "quantity": 50
+	},
+	{
+	  "product_name": "Snacks",
+	  "description": "Saltstenger",
+	  "price": 20.00,
+	  "quantity": 60
+	},
+	{
+	  "product_name": "Snacks",
+	  "description": "Melkesjokolade",
+	  "price": 20.00,
+	  "quantity": 75
+	},
+	{
+	  "product_name": "Bar",
+	  "description": "Proteinbar med sjokolade",
+	  "price": 30.00,
+	  "quantity": 40
+	},
+	{
+	  "product_name": "Bar",
+	  "description": "Energibar med nøtter",
+	  "price": 25.00,
+	  "quantity": 35
+	},
+	{
+	  "product_name": "Bar",
+	  "description": "Granola bar med bær",
+	  "price": 20.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Måltid",
+	  "description": "Kylling og ris",
+	  "price": 55.00,
+	  "quantity": 25
+	},
+	{
+	  "product_name": "Måltid",
+	  "description": "Spaghetti bolognese",
+	  "price": 50.00,
+	  "quantity": 30
+	},
+	{
+	  "product_name": "Måltid",
+	  "description": "Vegetargryte med bønner",
+	  "price": 45.00,
+	  "quantity": 20
+	}
+  ]
+  
